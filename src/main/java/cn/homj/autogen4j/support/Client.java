@@ -115,7 +115,7 @@ public class Client {
         put(data, "model", request.getModel());
         put(data, "input", input);
         put(data, "parameters", parameters);
-        return builder.post(RequestBody.create(APPLICATION_JSON, JSON.toJSONString(data))).build();
+        return builder.post(RequestBody.create(JSON.toJSONString(data), APPLICATION_JSON)).build();
     }
 
     /**
@@ -165,7 +165,7 @@ public class Client {
             .addHeader("Accept", "application/json")
             .addHeader("Content-Type", "application/json")
             .addHeader("Authorization", "Bearer " + apiKey)
-            .post(RequestBody.create(APPLICATION_JSON, JSON.toJSONString(data))).build();
+            .post(RequestBody.create(JSON.toJSONString(data), APPLICATION_JSON)).build();
         return execute(r, EmbeddingResponse.class);
     }
 
@@ -210,7 +210,7 @@ public class Client {
             .addHeader("Accept", "text/event-stream")
             .addHeader("Content-Type", "application/json")
             .addHeader("Authorization", "Bearer " + apiKey)
-            .post(RequestBody.create(APPLICATION_JSON, JSON.toJSONString(request))).build();
+            .post(RequestBody.create(JSON.toJSONString(request), APPLICATION_JSON)).build();
         EventSources.createFactory(client).newEventSource(r, listener);
     }
 
@@ -227,7 +227,7 @@ public class Client {
             .addHeader("Accept", "application/json")
             .addHeader("Content-Type", "application/json")
             .addHeader("Authorization", "Bearer " + apiKey)
-            .post(RequestBody.create(APPLICATION_JSON, JSON.toJSONString(request))).build();
+            .post(RequestBody.create(JSON.toJSONString(request), APPLICATION_JSON)).build();
         try (Response response = client.newCall(r).execute()) {
             ResponseBody body = response.body();
             if (body == null) {
