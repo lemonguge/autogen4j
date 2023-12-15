@@ -9,7 +9,6 @@ import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 
 import cn.homj.autogen4j.AgentFunction;
-import cn.homj.autogen4j.AgentFunctions;
 import cn.homj.autogen4j.support.openai.chat.Choice;
 import cn.homj.autogen4j.support.openai.chat.CompletionChunk;
 import cn.homj.autogen4j.support.openai.chat.CompletionListener;
