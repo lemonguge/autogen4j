@@ -70,7 +70,7 @@ OpenAI 的文本生成模型支持函数调用（Function calling），其中`gp
 
 > We strongly recommend building in user confirmation flows before taking actions that impact the world on behalf of users (sending an email, posting something online, making a purchase, etc).
 
-以上 OpenAI 文档中关于 Function calling 中的一段话，大意是执行函数调用前应该要有用户的确认流程。`agent-support`可以在工具包（Toolkit）中定义工具的使用权限，这部分也是与微软 AutoGen 最大的不同点。
+以上 OpenAI 文档中关于 Function calling 中的一段话，大意是执行函数调用前应该要有用户的确认流程。`autogen4j-agent`可以在工具包（Toolkit）中定义工具的使用权限，这部分也是与微软 AutoGen 最大的不同点。
 
 ```java
 public static void main(String[] args) {
