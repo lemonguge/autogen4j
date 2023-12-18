@@ -65,6 +65,8 @@ Process finished with exit code 0
 
 代码示例：[QianWenAgentTest.java](src/test/java/cn/homj/autogen4j/QianWenAgentTest.java)
 
+![AIAgent_01](img/AIAgent_01.png)
+
 ### 和OpenAI的GPT对话
 OpenAI 的文本生成模型支持函数调用（Function calling），其中`gpt-3.5-turbo-1106`模型还提供并行函数调用的能力（Parallel function calling）。
 
@@ -152,6 +154,8 @@ Process finished with exit code 0
 
 代码示例：[OpenAiAgentTest2.java](src/test/java/cn/homj/autogen4j/OpenAiAgentTest2.java)
 
+![AIAgent_01](img/AIAgent_02.png)
+
 ## Multi-Agent
 多个 Agent 在群聊（GroupChat）中对话，由管理员（GroupChatManager）选择下一个发言的 Agent。
 
@@ -216,5 +220,6 @@ exit
 Process finished with exit code 0
 ```
 
-
 代码示例：[GroupChatManagerTest3.java](src/test/java/cn/homj/autogen4j/GroupChatManagerTest3.java)
+
+![AIAgent_01](img/AIAgent_03.png)
