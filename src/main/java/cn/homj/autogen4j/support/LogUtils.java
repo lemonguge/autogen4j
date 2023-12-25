@@ -62,74 +62,50 @@ public class LogUtils {
 
     public static void info(String name, String message) {
         if (!disableLogger && hasLogger) {
-            _info(name, message);
+            getLogger(name).info(message);
         } else {
             System.out.println("[" + now() + "] INFO : " + message);
         }
     }
 
-    private static void _info(String name, String message) {
-        getLogger(name).info(message);
-    }
-
     public static void info(String name, String format, Object arg) {
         if (!disableLogger && hasLogger) {
-            _info(name, format, arg);
+            getLogger(name).info(format, arg);
         } else {
             System.out.println("[" + now() + "] INFO : " + format(format, arg));
         }
     }
 
-    private static void _info(String name, String format, Object arg) {
-        getLogger(name).info(format, arg);
-    }
-
     public static void info(String name, String format, Object arg, Object arg2) {
         if (!disableLogger && hasLogger) {
-            _info(name, format, arg, arg2);
+            getLogger(name).info(format, arg, arg2);
         } else {
             System.out.println("[" + now() + "] INFO : " + format(format, arg, arg2));
         }
     }
 
-    private static void _info(String name, String format, Object arg, Object arg2) {
-        getLogger(name).info(format, arg, arg2);
-    }
-
     public static void info(String name, String format, Object... args) {
         if (!disableLogger && hasLogger) {
-            _info(name, format, args);
+            getLogger(name).info(format, args);
         } else {
             System.out.println("[" + now() + "] INFO : " + format(format, args));
         }
     }
 
-    private static void _info(String name, String format, Object... args) {
-        getLogger(name).info(format, args);
-    }
-
     public static void warn(String name, String message) {
         if (!disableLogger && hasLogger) {
-            _warn(name, message);
+            getLogger(name).warn(message);
         } else {
             System.out.println("[" + now() + "] WARN : " + message);
         }
     }
 
-    private static void _warn(String name, String message) {
-        getLogger(name).warn(message);
-    }
-
     public static void error(String name, String message, Throwable t) {
         if (!disableLogger && hasLogger) {
-            _error(name, message, t);
+            getLogger(name).error(message, t);
         } else {
             System.err.println("[" + now() + "] ERROR: " + message);
             t.printStackTrace();
         }
-    }
-
-    private static void _error(String name, String message, Throwable t) {
-        getLogger(name).error(message, t);
     }
 }

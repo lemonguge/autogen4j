@@ -5,7 +5,7 @@
 
     <groupId>cn.homj.autogen4j</groupId>
     <artifactId>autogen4j-agent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>autogen4j-agent</name>
