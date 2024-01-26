@@ -1,6 +1,15 @@
 package cn.homj.autogen4j;
 
 /**
+ * For example:
+ * <pre> {@code
+ * public class Initializer {
+ *
+ *     static {
+ *         Definition.openAiApiKey = "your API-KEY";
+ *     }
+ * }}</pre>
+ *
  * @author jiehong.jh
  * @date 2022/12/8
  */
@@ -22,7 +31,7 @@ public class Definition {
         try {
             Class.forName("cn.homj.autogen4j.Initializer");
         } catch (Exception e) {
-            System.err.println("Initializer not found");
+            // do nothing
         }
     }
 }
